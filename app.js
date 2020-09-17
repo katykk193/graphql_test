@@ -14,6 +14,7 @@ const schema = require('./schema/schema');
 // const testSchema = require('./schema/types_schema');
 
 const cors = require('cors');
+const port = process.env.PORT || 5000;
 
 const app = express();
 
@@ -26,6 +27,6 @@ app.use(
   })
 );
 
-app.listen(5000, () => {
+app.listen(port, () => {
   console.log('Listening for requests on my awesome port 5000');
 });
