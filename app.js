@@ -13,8 +13,11 @@ mongoose.connection.once('open', () => {
 const schema = require('./schema/schema');
 // const testSchema = require('./schema/types_schema');
 
+const cors = require('cors');
+
 const app = express();
 
+app.use(cors());
 app.use(
   '/graphql',
   graphqlHTTP({
